@@ -41,13 +41,13 @@
 | Asset ID | 正式用途 | 正式英字ファイル名 | 種別 | 背景透過 | 使用セクション | 備考 | 正式採用状況 |
 |---|---|---|---|---|---|---|---|
 | CHAR-01 | Character Master / Brand Philosophy | `character_philosophy-guide.png` | キャラクターイラスト | あり | Brand Philosophy | 顔、口元、目、ほっぺ、耳、頭身、手足、色、塗り、手描き感のマスター | 正式採用済み / 実ファイル確認済み |
-| CHAR-02 | Packing | `character_how-it-works_packing-box.png` | キャラクターイラスト | あり | How It Works | 荷物を詰める説明補助 | 正式採用済み / 実ファイル確認済み |
-| CHAR-03 | Receive Items | `character_how-it-works_receive-items.png` | キャラクターイラスト | あり | How It Works | ユーザー指定によりCHAR-02と同一の正式採用画像を使用 | 正式採用済み / 実ファイル確認済み |
+| CHAR-02 | Packing | `character_how-it-works_packing-box.png` | キャラクターイラスト | あり | How It Works | 開いたBOXへマフラーを詰めるキャラクター。カメラ、本、植物、タオル、テープを含む | 正式採用済み / 実ファイル確認済み |
+| CHAR-03 | Receive Items | `character_how-it-works_receive-items.png` | キャラクターイラスト | あり | How It Works | 必要な物を取り出す説明補助。現在の正式ファイルを維持 | 正式採用済み / 実ファイル確認済み |
 | CHAR-04 | Simulator Result | `character_simulator-result_box-guide.png` | キャラクターイラスト | あり | Storage Simulator | 結果表示の親しみ・理解補助 | 正式採用済み / 実ファイル確認済み |
 | CHAR-05 | FAQ | `character_faq-checking-note.png` | キャラクターイラスト | あり | FAQ | FAQの補助。可読性を妨げない | 正式採用済み / 実ファイル確認済み |
 | CHAR-06 | Problem Support | `character_problem-storage-question.png` | キャラクターイラスト | あり | Problem | 共感補助。Problem Photoより主張させない | 正式採用済み / 実ファイル確認済み |
 
-> 全キャラクターはCHAR-01の正式採用1案目の顔・口元へ統一する。別案の口元は使用しない。CHAR-02とCHAR-03はユーザーの明示指定により同一画像を役割別ファイル名で使用するため、意図した重複である。
+> 全キャラクターはCHAR-01の正式採用1案目の顔・口元へ統一する。別案の口元は使用しない。CHAR-02とCHAR-03は別画像・別ハッシュの正式素材として管理する。
 
 ## 4. What You Can Store Icons
 
@@ -117,7 +117,7 @@
 |---|---:|---|---|
 | Photos | 6 | `assets/images/photos/` | 全点存在。PNG / RGB。Before / Afterは最終修正版 |
 | Logo | 1 | `assets/images/logo/` | `soto_logo-primary.png`を確認。PNG / RGBA |
-| Characters | 6 | `assets/images/characters/` | 全点存在。PNG / RGBA。CHAR-02 / 03の同一画像利用は正式指定 |
+| Characters | 6 | `assets/images/characters/` | 全点存在。PNG / RGBA。CHAR-02 / 03は別画像・別ハッシュ |
 | Icons | 8 | `assets/images/icons/` | 全点存在。PNG / RGBA。Security Icon 02はシンプル正式版 |
 | Boxes | 4 | `assets/images/boxes/` | 全点存在。PNG / RGBA。LARGEは108L表記の正式版 |
 | Diagrams | 1 | `assets/images/diagrams/` | 正式4ステップ図解を確認。PNG / RGBA |
@@ -133,7 +133,7 @@
 - Security Icon 02はスマートフォン + BOX + チェックを中心としたシンプル正式版である。
 - 正式ロゴ`soto_logo-primary.png`が存在し、透過状態を維持している。
 - 透過PNGのアルファチャンネルは全点で維持されている。
-- CHAR-02 / CHAR-03以外に同一ハッシュの素材はない。両者はユーザーの明示指定による意図的な同一画像利用である。
+- CHAR-02 / CHAR-03は別ハッシュであることを確認し、正式素材内に同一ハッシュの重複はない。
 - OGP / faviconフォルダは空で、未制作・後工程として扱う。
 - `assets/images/.DS_Store`はmacOSの管理ファイルであり、正式素材数には含めない。
 
