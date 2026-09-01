@@ -553,6 +553,724 @@
           </p>
         </div>
       </section>
+
+      <section id="box-price" class="price" aria-labelledby="price-title">
+        <div class="container price__inner">
+          <header class="price__header">
+            <p class="price__label font-en">BOX &amp; PRICE</p>
+            <h2 id="price-title" class="price__title">
+              必要なぶんだけ、<br>
+              シンプルに。
+            </h2>
+            <p class="price__intro">
+              預けたい量に合わせて、3つのサイズから。<br>
+              はじめるときに必要なのは、月額保管料だけです。
+            </p>
+          </header>
+
+          <ul class="price__plans">
+            <li class="price__plan">
+              <figure class="price__visual">
+                <img
+                  src="assets/images/boxes/soto_box-small.png"
+                  width="1536"
+                  height="1024"
+                  alt="soto SMALL BOX"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </figure>
+              <h3 class="price__plan-name font-en">SMALL <span>BOX</span></h3>
+              <p class="price__amount">
+                <span>月額</span>
+                <strong>440</strong><span>円</span>
+                <small>（税込）</small>
+              </p>
+              <dl class="price__specs">
+                <div>
+                  <dt>サイズ</dt>
+                  <dd>約 W38 × D38 × H32cm</dd>
+                </div>
+                <div>
+                  <dt>容量</dt>
+                  <dd>約45L</dd>
+                </div>
+                <div>
+                  <dt>収納例</dt>
+                  <dd>衣類・本・小物</dd>
+                </div>
+              </dl>
+            </li>
+
+            <li class="price__plan price__plan--standard">
+              <figure class="price__visual">
+                <img
+                  src="assets/images/boxes/soto_box-standard.png"
+                  width="1536"
+                  height="1024"
+                  alt="soto STANDARD BOX"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </figure>
+              <h3 class="price__plan-name font-en">STANDARD <span>BOX</span></h3>
+              <p class="price__guide">まず迷ったら、このサイズ。</p>
+              <p class="price__amount">
+                <span>月額</span>
+                <strong>660</strong><span>円</span>
+                <small>（税込）</small>
+              </p>
+              <dl class="price__specs">
+                <div>
+                  <dt>サイズ</dt>
+                  <dd>約 W45 × D45 × H40cm</dd>
+                </div>
+                <div>
+                  <dt>容量</dt>
+                  <dd>約80L</dd>
+                </div>
+                <div>
+                  <dt>収納例</dt>
+                  <dd>冬物衣類・寝具・趣味用品</dd>
+                </div>
+              </dl>
+            </li>
+
+            <li class="price__plan">
+              <figure class="price__visual">
+                <img
+                  src="assets/images/boxes/soto_box-large.png"
+                  width="1536"
+                  height="1024"
+                  alt="soto LARGE BOX"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </figure>
+              <h3 class="price__plan-name font-en">LARGE <span>BOX</span></h3>
+              <p class="price__amount">
+                <span>月額</span>
+                <strong>880</strong><span>円</span>
+                <small>（税込）</small>
+              </p>
+              <dl class="price__specs">
+                <div>
+                  <dt>サイズ</dt>
+                  <dd>約 W60 × D45 × H40cm</dd>
+                </div>
+                <div>
+                  <dt>容量</dt>
+                  <dd>約108L</dd>
+                </div>
+                <div>
+                  <dt>収納例</dt>
+                  <dd>布団・かさばる生活用品・まとめて預けたい物</dd>
+                </div>
+              </dl>
+            </li>
+          </ul>
+
+          <div class="price__summary" aria-labelledby="price-summary-title">
+            <h3 id="price-summary-title" class="price__summary-title">
+              はじめるときにかかるのは、<br>
+              月額保管料だけ。
+            </h3>
+            <ul class="price__included">
+              <li><span>BOX代</span><strong>0円</strong></li>
+              <li><span>BOX配送</span><strong>0円</strong></li>
+              <li><span>初回集荷</span><strong>0円</strong></li>
+              <li><span>入会金・初期費用</span><strong>0円</strong></li>
+              <li><span>最低利用期間</span><strong>なし</strong></li>
+            </ul>
+            <p class="price__note">
+              ※ 取り出し：1BOX 880円／回、再集荷：1BOX 550円。1BOX 20kgまで。契約は1か月単位で自動更新されます。
+            </p>
+          </div>
+
+          <a class="button button--primary price__simulator-link" href="#storage-simulator">
+            <span>自分に必要なBOX数をチェック</span>
+            <span class="button__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="storage-simulator" class="simulator" aria-labelledby="simulator-title">
+        <div class="container simulator__inner">
+          <header class="simulator__header">
+            <p class="simulator__label font-en">STORAGE SIMULATOR</p>
+            <p class="simulator__eyebrow">あなたなら、何BOXで余白ができる？</p>
+            <h2 id="simulator-title" class="simulator__title">
+              必要なBOX数を、<br>
+              1分でチェック。
+            </h2>
+            <p id="simulator-guidance" class="simulator__intro">
+              4つの質問から、STANDARD BOXの目安を確認できます。<br>
+              STANDARD BOXは1箱あたり月額660円（税込）です。
+            </p>
+          </header>
+
+          <form
+            class="simulator__form"
+            data-simulator-form
+            aria-describedby="simulator-guidance simulator-error"
+            novalidate
+          >
+            <div class="simulator__questions">
+              <fieldset class="simulator__question" data-question="winter-clothes">
+                <legend>
+                  <span class="simulator__question-number font-en">Q1</span>
+                  冬物衣類
+                </legend>
+                <div class="simulator__options">
+                  <label class="simulator__option">
+                    <input type="radio" name="winter-clothes" value="0">
+                    <span>少ない</span>
+                  </label>
+                  <label class="simulator__option">
+                    <input type="radio" name="winter-clothes" value="1">
+                    <span>普通</span>
+                  </label>
+                  <label class="simulator__option">
+                    <input type="radio" name="winter-clothes" value="2">
+                    <span>多い</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="simulator__question" data-question="bedding">
+                <legend>
+                  <span class="simulator__question-number font-en">Q2</span>
+                  寝具
+                </legend>
+                <div class="simulator__options">
+                  <label class="simulator__option">
+                    <input type="radio" name="bedding" value="0">
+                    <span>なし</span>
+                  </label>
+                  <label class="simulator__option">
+                    <input type="radio" name="bedding" value="1">
+                    <span>1セット</span>
+                  </label>
+                  <label class="simulator__option">
+                    <input type="radio" name="bedding" value="2">
+                    <span>2セット以上</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="simulator__question" data-question="travel-hobby">
+                <legend>
+                  <span class="simulator__question-number font-en">Q3</span>
+                  旅行・趣味用品
+                </legend>
+                <div class="simulator__options">
+                  <label class="simulator__option">
+                    <input type="radio" name="travel-hobby" value="0">
+                    <span>少ない</span>
+                  </label>
+                  <label class="simulator__option">
+                    <input type="radio" name="travel-hobby" value="1">
+                    <span>普通</span>
+                  </label>
+                  <label class="simulator__option">
+                    <input type="radio" name="travel-hobby" value="2">
+                    <span>多い</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="simulator__question" data-question="seasonal-home">
+                <legend>
+                  <span class="simulator__question-number font-en">Q4</span>
+                  季節家電・生活用品
+                </legend>
+                <div class="simulator__options">
+                  <label class="simulator__option">
+                    <input type="radio" name="seasonal-home" value="0">
+                    <span>なし</span>
+                  </label>
+                  <label class="simulator__option">
+                    <input type="radio" name="seasonal-home" value="1">
+                    <span>少し</span>
+                  </label>
+                  <label class="simulator__option">
+                    <input type="radio" name="seasonal-home" value="2">
+                    <span>多い</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <p id="simulator-error" class="simulator__error" aria-live="polite"></p>
+
+            <button class="button button--primary simulator__submit" type="submit">
+              <span>結果を見る</span>
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </button>
+          </form>
+
+          <section
+            id="simulator-result"
+            class="simulator__result"
+            aria-labelledby="simulator-result-title"
+            aria-live="polite"
+            hidden
+          >
+            <div class="simulator__result-copy">
+              <p class="simulator__result-lead">あなたには</p>
+              <h3 id="simulator-result-title" class="simulator__result-title">
+                <span class="font-en">STANDARD BOX</span><br>
+                × <strong data-simulator-box-count>1</strong>
+              </h3>
+              <p class="simulator__result-suffix">がおすすめです。</p>
+              <p class="simulator__result-price">
+                <span>月額</span>
+                <strong data-simulator-monthly-price>660</strong><span>円</span>
+                <small>（税込）</small>
+              </p>
+              <p class="simulator__result-note">BOX配送・初回集荷 0円</p>
+            </div>
+
+            <figure class="simulator__character" aria-hidden="true">
+              <img
+                src="assets/images/characters/character_simulator-result_box-guide.png"
+                width="1536"
+                height="1024"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              >
+            </figure>
+
+            <button
+              class="button button--primary simulator__start"
+              type="button"
+              data-simulator-start
+            >
+              <span>このBOX数ではじめる</span>
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </button>
+          </section>
+        </div>
+      </section>
+
+      <section class="why-soto" aria-labelledby="why-soto-title">
+        <div class="container why-soto__inner">
+          <header class="why-soto__header">
+            <p class="why-soto__label font-en">WHY SOTO</p>
+            <h2 id="why-soto-title" class="why-soto__title">
+              暮らしに合わせて、<br>
+              無理なく続けられる収納を。
+            </h2>
+          </header>
+
+          <ul class="why-soto__list">
+            <li class="why-soto__item">
+              <p class="why-soto__number font-en">01</p>
+              <div class="why-soto__content">
+                <h3 class="why-soto__item-title">家から預けられる</h3>
+                <p class="why-soto__copy">
+                  BOXに詰めたら、自宅から集荷。<br>
+                  倉庫まで運ぶ必要はありません。
+                </p>
+              </div>
+            </li>
+
+            <li class="why-soto__item">
+              <p class="why-soto__number font-en">02</p>
+              <div class="why-soto__content">
+                <h3 class="why-soto__item-title">1BOXから始められる</h3>
+                <p class="why-soto__copy">
+                  必要なぶんだけ。<br>
+                  最低利用期間なしで始められます。
+                </p>
+              </div>
+            </li>
+
+            <li class="why-soto__item">
+              <p class="why-soto__number font-en">03</p>
+              <div class="why-soto__content">
+                <h3 class="why-soto__item-title">Webで管理できる</h3>
+                <p class="why-soto__copy">
+                  預けたBOXを確認して、<br>
+                  必要になったら取り出し依頼。
+                </p>
+              </div>
+            </li>
+
+            <li class="why-soto__item">
+              <p class="why-soto__number font-en">04</p>
+              <div class="why-soto__content">
+                <h3 class="why-soto__item-title">持ち続けながら、余白をつくれる</h3>
+                <p class="why-soto__copy">
+                  大切なものを手放さず、<br>
+                  今の住まいを心地よく使えます。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="voice" aria-labelledby="voice-title">
+        <div class="container voice__inner">
+          <header class="voice__header">
+            <p class="voice__label font-en">VOICE</p>
+            <h2 id="voice-title" class="voice__title">
+              暮らしの中で、<br>
+              こんなふうに使われています。
+            </h2>
+          </header>
+
+          <div class="voice__list">
+            <article class="voice__item">
+              <p class="voice__case font-en">CASE 01</p>
+              <h3 class="voice__profile">30代 / 共働き夫婦</h3>
+              <p class="voice__stored">
+                <span>預けたもの</span>冬物衣類・スーツケース
+              </p>
+              <blockquote class="voice__quote">
+                <p>
+                  クローゼットに余白ができて、<br>
+                  毎日の服選びがしやすくなりました。<br>
+                  使わない季節のものを外に置くだけで、<br>
+                  部屋の印象まで軽くなった気がします。
+                </p>
+              </blockquote>
+            </article>
+
+            <article class="voice__item">
+              <p class="voice__case font-en">CASE 02</p>
+              <h3 class="voice__profile">30代 / 夫婦2人暮らし</h3>
+              <p class="voice__stored">
+                <span>預けたもの</span>キャンプ用品・趣味用品
+              </p>
+              <blockquote class="voice__quote">
+                <p>
+                  週末にしか使わない道具を預けたことで、<br>
+                  リビングの隅を収納場所にしなくてよくなりました。<br>
+                  必要になったら戻せるので、<br>
+                  手放さなくていいのも安心です。
+                </p>
+              </blockquote>
+            </article>
+
+            <article class="voice__item">
+              <p class="voice__case font-en">CASE 03</p>
+              <h3 class="voice__profile">30代 / マンション暮らし</h3>
+              <p class="voice__stored">
+                <span>預けたもの</span>来客用寝具・季節家電
+              </p>
+              <blockquote class="voice__quote">
+                <p>
+                  引っ越すほどではないけれど、<br>
+                  もう少し広く使いたいと思っていた家に<br>
+                  ちょうどよい余白ができました。
+                </p>
+              </blockquote>
+            </article>
+          </div>
+
+          <p class="voice__disclaimer">
+            ※ ポートフォリオ用に設定した利用イメージです。
+          </p>
+        </div>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <div class="container faq__inner">
+          <header class="faq__header">
+            <div class="faq__heading">
+              <p class="faq__label font-en">FAQ</p>
+              <h2 id="faq-title" class="faq__title">よくあるご質問</h2>
+            </div>
+
+            <figure class="faq__character" aria-hidden="true">
+              <img
+                src="assets/images/characters/character_faq-checking-note.png"
+                width="1159"
+                height="1357"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              >
+            </figure>
+          </header>
+
+          <div class="faq__list">
+            <section class="faq__item">
+              <h3 class="faq__item-heading">
+                <button
+                  id="faq-question-01"
+                  class="faq__question"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="faq-answer-01"
+                >
+                  <span class="faq__question-copy">
+                    <span class="faq__mark font-en" aria-hidden="true">Q.</span>
+                    <span>何を預けられますか？</span>
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-answer-01"
+                class="faq__answer"
+                aria-labelledby="faq-question-01"
+              >
+                <p>
+                  衣類、寝具、旅行用品、趣味用品、季節家電など、BOXに収まる生活用品をお預かりできます。
+                </p>
+              </div>
+            </section>
+
+            <section class="faq__item">
+              <h3 class="faq__item-heading">
+                <button
+                  id="faq-question-02"
+                  class="faq__question"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="faq-answer-02"
+                >
+                  <span class="faq__question-copy">
+                    <span class="faq__mark font-en" aria-hidden="true">Q.</span>
+                    <span>預けられないものはありますか？</span>
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-answer-02"
+                class="faq__answer"
+                aria-labelledby="faq-question-02"
+              >
+                <p>
+                  現金・有価証券・貴金属・危険物・食品・飲料・生き物・液体・医薬品などはお預かりできません。
+                </p>
+              </div>
+            </section>
+
+            <section class="faq__item">
+              <h3 class="faq__item-heading">
+                <button
+                  id="faq-question-03"
+                  class="faq__question"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="faq-answer-03"
+                >
+                  <span class="faq__question-copy">
+                    <span class="faq__mark font-en" aria-hidden="true">Q.</span>
+                    <span>BOXは途中で追加できますか？</span>
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-answer-03"
+                class="faq__answer"
+                aria-labelledby="faq-question-03"
+              >
+                <p>はい。必要になったタイミングで、追加のBOXを申し込めます。</p>
+              </div>
+            </section>
+
+            <section class="faq__item">
+              <h3 class="faq__item-heading">
+                <button
+                  id="faq-question-04"
+                  class="faq__question"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="faq-answer-04"
+                >
+                  <span class="faq__question-copy">
+                    <span class="faq__mark font-en" aria-hidden="true">Q.</span>
+                    <span>預けたBOXはいつ取り出せますか？</span>
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-answer-04"
+                class="faq__answer"
+                aria-labelledby="faq-question-04"
+              >
+                <p>
+                  Webから24時間取り出し依頼ができ、最短翌日に発送します。到着日は地域によって異なります。
+                </p>
+              </div>
+            </section>
+
+            <section class="faq__item">
+              <h3 class="faq__item-heading">
+                <button
+                  id="faq-question-05"
+                  class="faq__question"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="faq-answer-05"
+                >
+                  <span class="faq__question-copy">
+                    <span class="faq__mark font-en" aria-hidden="true">Q.</span>
+                    <span>最低利用期間はありますか？</span>
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-answer-05"
+                class="faq__answer"
+                aria-labelledby="faq-question-05"
+              >
+                <p>ありません。1か月単位でご利用いただけます。</p>
+              </div>
+            </section>
+
+            <section class="faq__item">
+              <h3 class="faq__item-heading">
+                <button
+                  id="faq-question-06"
+                  class="faq__question"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="faq-answer-06"
+                >
+                  <span class="faq__question-copy">
+                    <span class="faq__mark font-en" aria-hidden="true">Q.</span>
+                    <span>保管中のBOXは確認できますか？</span>
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-answer-06"
+                class="faq__answer"
+                aria-labelledby="faq-question-06"
+              >
+                <p>
+                  マイページから、保管中のBOX数・BOX名・預けた日などを確認できます。
+                </p>
+              </div>
+            </section>
+
+            <section class="faq__item">
+              <h3 class="faq__item-heading">
+                <button
+                  id="faq-question-07"
+                  class="faq__question"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="faq-answer-07"
+                >
+                  <span class="faq__question-copy">
+                    <span class="faq__mark font-en" aria-hidden="true">Q.</span>
+                    <span>取り出しや再集荷には料金がかかりますか？</span>
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-answer-07"
+                class="faq__answer"
+                aria-labelledby="faq-question-07"
+              >
+                <p>取り出しは1BOX 880円、再集荷は1BOX 550円です。</p>
+              </div>
+            </section>
+
+            <section class="faq__item">
+              <h3 class="faq__item-heading">
+                <button
+                  id="faq-question-08"
+                  class="faq__question"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="faq-answer-08"
+                >
+                  <span class="faq__question-copy">
+                    <span class="faq__mark font-en" aria-hidden="true">Q.</span>
+                    <span>補償はありますか？</span>
+                  </span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-answer-08"
+                class="faq__answer"
+                aria-labelledby="faq-question-08"
+              >
+                <p>万一の場合は、1BOXにつき最大30,000円まで補償します。</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" aria-labelledby="final-cta-title">
+        <figure class="final-cta__media">
+          <img
+            src="assets/images/photos/final-cta_relaxed-home.png"
+            width="1448"
+            height="1086"
+            alt="余白のあるリビングでゆっくり過ごす夫婦"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+        <div class="container final-cta__inner">
+          <h2 id="final-cta-title" class="final-cta__title">
+            今の家に、<br>
+            もう少し余白を。
+          </h2>
+
+          <div class="final-cta__copy">
+            <p>
+              手放さなくても、<br>
+              暮らす場所は増やせます。
+            </p>
+            <p>
+              まずは1BOXから、<br>
+              家の外に収納をつくってみませんか。
+            </p>
+          </div>
+
+          <a class="button button--primary final-cta__button" href="#application">
+            <span>保管BOXを申し込む</span>
+            <span class="button__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <a class="site-footer__brand" href="#top" aria-label="soto ページ上部へ">
+          <img
+            src="assets/images/logo/soto_logo-primary.png"
+            width="2128"
+            height="739"
+            alt="soto"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+
+        <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+          <ul class="site-footer__links">
+            <li><a class="site-footer__link" href="#terms">利用規約</a></li>
+            <li><a class="site-footer__link" href="#privacy">プライバシーポリシー</a></li>
+            <li><a class="site-footer__link" href="#company">運営会社</a></li>
+            <li><a class="site-footer__link" href="#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+
+        <p class="site-footer__copyright font-en"><small>© 2026 soto</small></p>
+      </div>
+    </footer>
+    <script src="js/script.js" defer></script>
   </body>
 </html>
