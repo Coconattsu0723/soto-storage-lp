@@ -2,13 +2,13 @@
 
 ## 0. 文書の役割
 
-正式採用済みの元素材、Web配信用最適化素材、後工程素材を管理する正本。正式元素材26点のファイル名、格納先、形式、透過状態は2026-08-31に実ファイルと照合済み。Web配信用WebP 25点は2026-09-03に生成・照合済み。
+正式採用済みの元素材、Web配信用最適化素材、公開用素材を管理する正本。正式元素材26点のファイル名、格納先、形式、透過状態は2026-08-31に実ファイルと照合済み。Web配信用WebP 25点と公開用OGP / faviconは2026-09-03に生成・照合済み。
 
 ### ステータス
 
 - **正式採用済み**：ビジュアルとして採用決定済み。
 - **Web配信用**：正式元素材から内容を変えずに生成し、LPが参照する軽量化済み派生ファイル。
-- **後工程**：現段階では制作しない。
+- **公開用**：SNS共有、ブラウザーUI、ホーム画面等で使用する公開時の派生ファイル。
 - **実ファイル確認済み**：正式名で格納済みで、形式・透過状態まで確認済み。
 
 ### ファイル名ルール
@@ -116,23 +116,31 @@
 - 写真、キャラクター、アイコン、BOX、図解、ロゴの内容・構図・色は変更しない。
 - 透過が必要なWebPはアルファチャンネルを維持する。
 - `soto_box-size-comparison.png`は現行LPで未使用のため、WebP派生を作成しない。
-- OGP / faviconは本最適化の対象外とし、未制作のまま後工程で扱う。
+- OGP / faviconはLP本文画像の最適化対象とは分け、下記「公開用素材」で管理する。
 
-## 9. 後工程素材
+## 9. 公開用素材
 
-| Asset ID | 正式用途 | 予定英字ファイル名 | 種別 | 背景透過 | 使用セクション | 備考 | 正式採用状況 |
-|---|---|---|---|---|---|---|---|
-| OGP-01 | Social Share Image | `soto_ogp.png` | OGP画像 | なし | Metadata | 1200 × 630候補。正式公開URL・Metadata整理時に制作 | 後工程 / 未制作 |
-| FAVICON-01 | Favicon | `soto_favicon.svg`ほか | favicon一式 | 形式による | Browser UI | 公開前工程で仕様決定・制作 | 後工程 / 未制作 |
+| Asset ID | 正式用途 | 正式英字ファイル名 | サイズ | 形式 | 背景透過 | 使用箇所 | 備考 | 正式採用状況 |
+|---|---|---|---:|---|---|---|---|---|
+| OGP-01 | Social Share Image | `soto_ogp.png` | 1200 × 630px | PNG | なし | Metadata / SNS共有 | PHOTO-01とLOGO-01を使用。正式カテゴリーとHero Main Copyを安全領域内に配置 | 正式採用済み / 実ファイル確認済み |
+| FAVICON-01 | Browser Favicon | `favicon-32.png` | 32 × 32px | PNG | なし | Browser UI | LOGO-01先頭の正式な小文字`s`字形。Oat Beige背景 + Cocoa Brownマーク | 正式採用済み / 実ファイル確認済み |
+| FAVICON-02 | Browser Favicon | `favicon-48.png` | 48 × 48px | PNG | なし | Browser UI | LOGO-01先頭の正式な小文字`s`字形。Oat Beige背景 + Cocoa Brownマーク | 正式採用済み / 実ファイル確認済み |
+| FAVICON-03 | Apple Touch Icon | `apple-touch-icon.png` | 180 × 180px | PNG | なし | Home Screen | LOGO-01先頭の正式な小文字`s`字形。Oat Beige背景 + Cocoa Brownマーク | 正式採用済み / 実ファイル確認済み |
+
+### HTML組み込み状況
+
+- favicon 32px / 48pxとApple Touch Iconは`index.html`へ組み込み済み。
+- OGPのタイトル、説明、サイト名、言語とX / Twitter CardのURL非依存項目は`index.html`へ組み込み済み。
+- `canonical`、`og:url`、`og:image`、`twitter:image`は正式公開URL確定後に絶対URLで設定する。仮URLは使用しない。
 
 ## 10. 採用・制作上の重要ルール
 
 - 実装前に必要な正式素材26点はすべて正式名で格納済み。
 - 新しい写真、キャラクター、アイコン、図解を勝手に追加しない。
 - Voice用の人物写真は追加しない。
-- OGP / faviconはこの工程では制作しない。
+- OGP / faviconは公開用派生素材として正式制作済み。faviconとURL非依存のMetadataはHTMLへ組み込み済み。
 - 不足を感じる場合は新規制作せず、「要確認」としてユーザーへ提示する。
-- LP使用中25点のWeb配信用WebP化は完了済み。OGP / favicon制作は後工程とする。
+- LP使用中25点のWeb配信用WebP化と、公開用OGP / favicon制作は完了済み。
 
 ## 11. 正式元素材の最終確認結果
 
@@ -159,10 +167,10 @@
 - 正式ロゴ`soto_logo-primary.png`が存在し、透過状態を維持している。
 - 透過PNGのアルファチャンネルは全点で維持されている。
 - CHAR-02 / CHAR-03は別ハッシュであることを確認し、正式素材内に同一ハッシュの重複はない。
-- OGP / faviconフォルダは空で、未制作・後工程として扱う。
+- OGPは1200 × 630pxのPNG 1点、faviconは32px / 48px / 180pxのPNG 3点を正式名で格納済み。
 - `assets/images/.DS_Store`はmacOSの管理ファイルであり、正式素材数には含めない。
 
 ### 要確認事項
 
 - `STORAGE FOR BETTER LIVING`が一部画像内に残っているが、正式コピーではない。実装ではコピーとして使用しない。
-- OGP / faviconは公開前工程で制作・確定する。
+- 正式公開URLに基づく`canonical`、`og:url`、`og:image`、`twitter:image`の設定は次工程で行う。
