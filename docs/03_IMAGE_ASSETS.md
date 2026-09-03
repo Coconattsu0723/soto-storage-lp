@@ -131,14 +131,15 @@
 
 - favicon 32px / 48pxとApple Touch Iconは`index.html`へ組み込み済み。
 - OGPのタイトル、説明、サイト名、言語とX / Twitter CardのURL非依存項目は`index.html`へ組み込み済み。
-- `canonical`、`og:url`、`og:image`、`twitter:image`は正式公開URL確定後に絶対URLで設定する。仮URLは使用しない。
+- 正式公開URL`https://coconattsu0723.github.io/soto-storage-lp/`を`canonical`と`og:url`へ設定済み。
+- OGP画像とX / Twitter画像は`https://coconattsu0723.github.io/soto-storage-lp/assets/images/ogp/soto_ogp.png`の絶対URLを設定済み。
 
 ## 10. 採用・制作上の重要ルール
 
 - 実装前に必要な正式素材26点はすべて正式名で格納済み。
 - 新しい写真、キャラクター、アイコン、図解を勝手に追加しない。
 - Voice用の人物写真は追加しない。
-- OGP / faviconは公開用派生素材として正式制作済み。faviconとURL非依存のMetadataはHTMLへ組み込み済み。
+- OGP / faviconは公開用派生素材として正式制作済み。faviconと公開用MetadataはHTMLへ組み込み済み。
 - 不足を感じる場合は新規制作せず、「要確認」としてユーザーへ提示する。
 - LP使用中25点のWeb配信用WebP化と、公開用OGP / favicon制作は完了済み。
 
@@ -173,4 +174,4 @@
 ### 要確認事項
 
 - `STORAGE FOR BETTER LIVING`が一部画像内に残っているが、正式コピーではない。実装ではコピーとして使用しない。
-- 正式公開URLに基づく`canonical`、`og:url`、`og:image`、`twitter:image`の設定は次工程で行う。
+- 公開用MetadataのHTML設定は完了済み。公開環境への反映確認はcommit / push後に行う。
