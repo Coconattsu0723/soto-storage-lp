@@ -63,6 +63,17 @@
 
     <main id="main-content">
       <section class="hero" aria-labelledby="hero-title">
+        <figure class="hero__media">
+          <img
+            src="assets/images/photos/hero_main-living-space.webp"
+            width="1448"
+            height="1086"
+            alt="自然光が差し込む、ゆとりのあるリビングでくつろぐ二人"
+            fetchpriority="high"
+            decoding="async"
+          >
+        </figure>
+
         <div class="container hero__inner">
           <div class="hero__intro">
             <p class="hero__category">宅配型収納サービス</p>
@@ -70,17 +81,6 @@
               家の外にもうひとつの収納
             </h1>
           </div>
-
-          <figure class="hero__media">
-            <img
-              src="assets/images/photos/hero_main-living-space.webp"
-              width="1448"
-              height="1086"
-              alt="自然光が差し込む、ゆとりのあるリビングでくつろぐ二人"
-              fetchpriority="high"
-              decoding="async"
-            >
-          </figure>
 
           <div class="hero__body">
             <div class="hero__copy">
@@ -401,7 +401,7 @@
 
           <div class="living-change__comparison">
             <figure class="living-change__item">
-              <p class="living-change__item-label font-en">BEFORE</p>
+              <p class="living-change__item-label">預ける前</p>
               <div class="living-change__media">
                 <img
                   src="assets/images/photos/living-before_limited-space.webp"
@@ -416,7 +416,7 @@
             </figure>
 
             <figure class="living-change__item">
-              <p class="living-change__item-label font-en">AFTER</p>
+              <p class="living-change__item-label living-change__item-label--after">預けた後</p>
               <div class="living-change__media">
                 <img
                   src="assets/images/photos/living-after_more-space.webp"
@@ -929,8 +929,13 @@
 
           <div class="voice__list">
             <article class="voice__item">
-              <p class="voice__case font-en">CASE 01</p>
-              <h3 class="voice__profile">30代 / 共働き夫婦</h3>
+              <header class="voice__person">
+                <span class="voice__avatar voice__avatar--bob" aria-hidden="true"></span>
+                <div>
+                  <p class="voice__case font-en">CASE 01</p>
+                  <h3 class="voice__profile">30代 / 共働き夫婦</h3>
+                </div>
+              </header>
               <p class="voice__stored">
                 <span>預けたもの</span>冬物衣類・スーツケース
               </p>
@@ -945,8 +950,13 @@
             </article>
 
             <article class="voice__item">
-              <p class="voice__case font-en">CASE 02</p>
-              <h3 class="voice__profile">30代 / 夫婦2人暮らし</h3>
+              <header class="voice__person">
+                <span class="voice__avatar voice__avatar--short" aria-hidden="true"></span>
+                <div>
+                  <p class="voice__case font-en">CASE 02</p>
+                  <h3 class="voice__profile">30代 / 夫婦2人暮らし</h3>
+                </div>
+              </header>
               <p class="voice__stored">
                 <span>預けたもの</span>キャンプ用品・趣味用品
               </p>
@@ -961,8 +971,13 @@
             </article>
 
             <article class="voice__item">
-              <p class="voice__case font-en">CASE 03</p>
-              <h3 class="voice__profile">30代 / マンション暮らし</h3>
+              <header class="voice__person">
+                <span class="voice__avatar voice__avatar--bun" aria-hidden="true"></span>
+                <div>
+                  <p class="voice__case font-en">CASE 03</p>
+                  <h3 class="voice__profile">30代 / マンション暮らし</h3>
+                </div>
+              </header>
               <p class="voice__stored">
                 <span>預けたもの</span>来客用寝具・季節家電
               </p>
@@ -1240,10 +1255,13 @@
             </p>
           </div>
 
-          <a class="button button--primary final-cta__button" href="#application">
-            <span>保管BOXを申し込む</span>
-            <span class="button__arrow" aria-hidden="true">→</span>
-          </a>
+          <div class="final-cta__action">
+            <p class="final-cta__price">月額 <strong>440円〜</strong>（税込）</p>
+            <a class="button button--primary final-cta__button" href="#application">
+              <span>保管BOXを申し込む</span>
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
