@@ -317,7 +317,7 @@ a {
 
 .problem__content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(5.5rem, 6.5rem);
+  grid-template-columns: minmax(0, 1fr) clamp(6.5rem, 24vw, 8rem);
   column-gap: var(--space-3);
   row-gap: var(--space-4);
   align-items: end;
@@ -348,7 +348,7 @@ a {
   grid-column: 2;
   grid-row: 2;
   align-self: end;
-  width: min(100%, 6.5rem);
+  width: 100%;
   margin: 0 0 0 auto;
 }
 
@@ -381,13 +381,9 @@ a {
   line-height: 1.55;
 }
 
-.philosophy__body {
-  margin-top: var(--space-8);
-}
-
 .philosophy__character {
-  width: 9.5rem;
-  margin: 0 auto;
+  width: min(100%, 14rem);
+  margin: var(--space-8) auto 0;
 }
 
 .philosophy__character img {
@@ -535,13 +531,13 @@ a {
 .how-it-works__step--packing,
 .how-it-works__step--receive {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(6.25rem, 7rem);
+  grid-template-columns: minmax(0, 1fr) clamp(7rem, 24vw, 8.5rem);
   align-items: end;
   gap: var(--space-3);
 }
 
 .how-it-works__step--packing {
-  grid-template-columns: minmax(0, 1fr) minmax(7.5rem, 8.5rem);
+  grid-template-columns: minmax(0, 1fr) clamp(8.5rem, 26vw, 10rem);
 }
 
 .how-it-works__number {
@@ -569,21 +565,13 @@ a {
 }
 
 .how-it-works__character {
-  width: 7rem;
+  width: 100%;
   margin: 0;
   justify-self: end;
 }
 
 .how-it-works__character img {
   width: 100%;
-}
-
-.how-it-works__character--receive {
-  width: 6.25rem;
-}
-
-.how-it-works__step--packing .how-it-works__character {
-  width: 8.5rem;
 }
 
 .store-categories {
@@ -1302,7 +1290,7 @@ a {
 
 .simulator__result {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(5.5rem, 6.5rem);
+  grid-template-columns: minmax(0, 1fr) clamp(6.5rem, 24vw, 8rem);
   align-items: end;
   gap: var(--space-4);
   margin-top: var(--space-8);
@@ -1570,7 +1558,7 @@ a {
 
 .faq__header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 7rem;
+  grid-template-columns: minmax(0, 1fr) 8.5rem;
   align-items: end;
   gap: var(--space-4);
 }
@@ -1597,7 +1585,7 @@ a {
 }
 
 .faq__character {
-  width: 7rem;
+  width: 100%;
   margin: 0;
   justify-self: end;
 }
@@ -1919,35 +1907,24 @@ a {
 
   .problem__content {
     grid-area: content;
-    grid-template-columns: minmax(0, 1fr) minmax(6rem, 7rem);
+    grid-template-columns: minmax(0, 1fr) 9rem;
     column-gap: var(--space-4);
     row-gap: var(--space-4);
     margin-top: var(--space-8);
   }
 
-  .problem__character {
-    width: min(100%, 7rem);
-  }
-
   .philosophy__inner {
     max-width: 54rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5rem);
     padding-block: clamp(5rem, 9vw, 8rem);
   }
 
-  .philosophy__body {
-    display: grid;
-    grid-template-columns: minmax(10rem, 0.45fr) minmax(0, 0.55fr);
-    align-items: center;
-    gap: clamp(2rem, 6vw, 5rem);
-    margin-top: var(--space-10);
-  }
-
   .philosophy__character {
-    width: min(100%, 12rem);
-  }
-
-  .philosophy__copy {
-    margin-top: 0;
+    width: min(100%, 20rem);
+    margin: 0 auto;
   }
 
   .about-soto__inner {
@@ -1991,20 +1968,12 @@ a {
     padding-block: var(--space-6);
   }
 
-  .how-it-works__character {
-    width: 6.25rem;
-  }
-
   .how-it-works__step--packing {
-    grid-template-columns: minmax(0, 1fr) 7rem;
-  }
-
-  .how-it-works__step--packing .how-it-works__character {
-    width: 7rem;
+    grid-template-columns: minmax(0, 1fr) clamp(8.5rem, 13vw, 10rem);
   }
 
   .how-it-works__step--receive {
-    grid-template-columns: minmax(0, 1fr) 6.25rem;
+    grid-template-columns: minmax(0, 1fr) 7.5rem;
   }
 
   .store-categories__inner {
@@ -2146,7 +2115,7 @@ a {
   }
 
   .simulator__result {
-    grid-template-columns: minmax(0, 1fr) 9rem;
+    grid-template-columns: minmax(0, 1fr) 11rem;
     padding: var(--space-8);
   }
 
@@ -2199,12 +2168,8 @@ a {
 
   .faq__header {
     max-width: 46rem;
-    grid-template-columns: minmax(0, 1fr) 9rem;
+    grid-template-columns: minmax(0, 1fr) 11rem;
     gap: var(--space-8);
-  }
-
-  .faq__character {
-    width: 9rem;
   }
 
   .faq__list {
@@ -2347,14 +2312,10 @@ a {
   }
 
   .problem__content {
-    grid-template-columns: minmax(0, 1fr) 7.5rem;
+    grid-template-columns: minmax(0, 1fr) 10rem;
     align-self: center;
     align-content: center;
     row-gap: var(--space-6);
-  }
-
-  .problem__character {
-    width: min(100%, 7.5rem);
   }
 
   .problem__copy p + p {
@@ -2363,25 +2324,6 @@ a {
 
   .philosophy__inner {
     max-width: 70rem;
-  }
-
-  .philosophy__header {
-    max-width: 60rem;
-  }
-
-  .philosophy__title br:nth-of-type(2) {
-    display: none;
-  }
-
-  .philosophy__body {
-    max-width: 48rem;
-    grid-template-columns: 12rem minmax(0, 1fr);
-    gap: var(--space-10);
-    margin: var(--space-8) auto 0;
-  }
-
-  .philosophy__character {
-    width: min(100%, 11.5rem);
   }
 
   .about-soto__body {
