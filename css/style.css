@@ -110,8 +110,7 @@ a {
   position: relative;
   z-index: var(--z-header);
   min-height: var(--header-height);
-  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 72%, transparent);
-  background: color-mix(in srgb, var(--color-bg) 94%, transparent);
+  background: var(--color-accent);
 }
 
 .site-header__inner {
@@ -160,9 +159,8 @@ a {
 }
 
 .hero {
-  background:
-    radial-gradient(circle at 100% 0%, rgb(243 213 141 / 22%), transparent 37%),
-    var(--color-bg);
+  background: var(--color-text);
+  color: var(--color-bg);
 }
 
 .hero__inner {
@@ -174,7 +172,7 @@ a {
   align-items: center;
   gap: var(--space-2);
   margin: 0 0 var(--space-3);
-  color: var(--color-text-sub);
+  color: var(--color-bg-sub);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -218,7 +216,7 @@ a {
 }
 
 .hero__copy {
-  color: var(--color-text-sub);
+  color: var(--color-bg-sub);
   line-height: 1.85;
 }
 
@@ -506,14 +504,6 @@ a {
   line-height: 1.55;
 }
 
-.how-it-works__overview {
-  margin: var(--space-6) 0 0;
-}
-
-.how-it-works__overview img {
-  width: 100%;
-}
-
 .how-it-works__steps {
   display: grid;
   gap: var(--space-4);
@@ -529,16 +519,24 @@ a {
   background: var(--color-white);
 }
 
-.how-it-works__step--packing,
-.how-it-works__step--receive {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(7rem, 24vw, 8.5rem);
-  align-items: end;
-  gap: var(--space-3);
+.how-it-works__illustration {
+  width: min(100%, 11rem);
+  aspect-ratio: 1;
+  margin: 0 auto var(--space-4);
+  background: url("../assets/images/diagrams/soto_how-it-works_flow-diagram.webp")
+    var(--step-image-position, 0%) center / 460% auto no-repeat;
 }
 
-.how-it-works__step--packing {
-  grid-template-columns: minmax(0, 1fr) clamp(8.5rem, 26vw, 10rem);
+.how-it-works__step:nth-child(2) {
+  --step-image-position: 33.5%;
+}
+
+.how-it-works__step:nth-child(3) {
+  --step-image-position: 66.5%;
+}
+
+.how-it-works__step:nth-child(4) {
+  --step-image-position: 100%;
 }
 
 .how-it-works__number {
@@ -563,16 +561,6 @@ a {
   color: var(--color-text-sub);
   font-size: 0.9375rem;
   line-height: 1.8;
-}
-
-.how-it-works__character {
-  width: 100%;
-  margin: 0;
-  justify-self: end;
-}
-
-.how-it-works__character img {
-  width: 100%;
 }
 
 .store-categories {
@@ -1827,22 +1815,26 @@ a {
   content: "";
 }
 
+.hero__action,
 .final-cta__action {
   width: min(100%, 20rem);
   margin-top: var(--space-6);
   text-align: center;
 }
 
+.hero__price,
 .final-cta__price {
   margin: 0 0 var(--space-3);
   font-size: 0.875rem;
 }
 
+.hero__price strong,
 .final-cta__price strong {
   color: var(--color-light);
   font-size: 1.375rem;
 }
 
+.hero__button,
 .final-cta__button {
   width: 100%;
   margin-top: 0;
@@ -1850,6 +1842,7 @@ a {
   color: var(--color-text);
 }
 
+.hero__button:focus-visible,
 .final-cta__button:focus-visible {
   outline-color: var(--color-bg);
 }
@@ -1914,8 +1907,7 @@ a {
 
 @media (hover: hover) {
   .site-nav__cta:hover {
-    color: var(--color-white);
-    background: var(--color-accent);
+    background: var(--color-white);
   }
 
   .button--primary:hover {
@@ -1923,6 +1915,7 @@ a {
     transform: translateY(-2px);
   }
 
+  .hero__button:hover,
   .final-cta__button:hover {
     background: var(--color-bg);
   }
@@ -1947,7 +1940,24 @@ a {
   }
 
   .hero__inner {
-    padding-block: 2.5rem 3rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "intro action"
+      "body action";
+    column-gap: var(--space-8);
+    padding-block: clamp(2.5rem, 4vw, 4rem);
+  }
+
+  .hero__intro {
+    grid-area: intro;
+  }
+
+  .hero__action {
+    grid-area: action;
+    align-self: center;
+    width: auto;
+    margin-top: 0;
   }
 
   .hero__title {
@@ -1955,6 +1965,7 @@ a {
   }
 
   .hero__body {
+    grid-area: body;
     max-width: 44rem;
   }
 
@@ -1964,10 +1975,6 @@ a {
 
   .hero__copy-break {
     display: none;
-  }
-
-  .hero__body .button--primary {
-    margin-top: var(--space-6);
   }
 
   .button--primary {
@@ -2044,21 +2051,9 @@ a {
     padding-block: clamp(4.5rem, 8vw, 7rem);
   }
 
-  .how-it-works__overview {
-    margin-top: var(--space-8);
-  }
-
   .how-it-works__steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: var(--space-8);
-  }
-
-  .how-it-works__step--packing {
-    grid-template-columns: minmax(0, 1fr) clamp(8.5rem, 13vw, 10rem);
-  }
-
-  .how-it-works__step--receive {
-    grid-template-columns: minmax(0, 1fr) 7.5rem;
   }
 
   .store-categories__inner {
@@ -2362,22 +2357,6 @@ a {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .how-it-works__step--packing,
-  .how-it-works__step--receive {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .how-it-works__character {
-    width: min(100%, 8rem);
-    margin: auto auto 0;
-  }
-
-  .how-it-works__step--packing .how-it-works__character {
-    width: min(100%, 11rem);
-  }
-
   .how-it-works__step-copy br {
     display: none;
   }
@@ -2440,11 +2419,6 @@ a {
 
   .about-soto__visual img {
     width: min(100%, 18rem);
-  }
-
-  .how-it-works__overview {
-    max-width: 60rem;
-    margin-inline: auto;
   }
 
   .how-it-works__steps {
